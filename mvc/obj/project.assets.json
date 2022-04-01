@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\test\\DeployTest\\DeployTest.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\teeest\\mvc\\DeployTest.csproj",
       "projectName": "DeployTest",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\test\\DeployTest\\DeployTest.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\teeest\\mvc\\DeployTest.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\test\\DeployTest\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\teeest\\mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

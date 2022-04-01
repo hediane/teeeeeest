@@ -14,7 +14,7 @@ services:
 
  projet:
   build:
-   context : ./DeployTest/
+   context : ./mvc/
    dockerfile : dockerfile
   container_name: project
   volumes:
