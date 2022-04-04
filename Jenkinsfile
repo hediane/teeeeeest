@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent docker
 
     stages {
         stage('Build') {
             steps {
-                 sh "docker build -t teeeeeest:B${BUILD_NUMBER} -f dockerfile ."
+                 sh "docker build -t teeeeeest -f dockerfile ."
             }
         }
         stage('Integration Test') {
