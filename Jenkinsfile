@@ -10,7 +10,7 @@ pipeline {
 	
         stage('Integration Test') {
             steps {
-		withEnv(["PATH=$PATH:./usr/local/bin/"]){
+		withEnv(["PATH=$PATH:~/.usr/local/bin"]){
 		
                 sh "docker-compose docker-compose.yml up "
             }
