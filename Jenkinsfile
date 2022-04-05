@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                 sh "docker build -t teeeeeest -f ./teeeeeest/mvc/dockerfile ."
+                 sh "docker build -t teeeeeest -f ./mvc/dockerfile ."
             }
         }
         stage('Integration Test') {
