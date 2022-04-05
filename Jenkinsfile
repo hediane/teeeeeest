@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Integration Test') {
             steps {
-                sh "docker-compose -f docker-compose.yml up "
+                sh "docker-compose ./docker-compose.yml up "
             }
         }
     }
