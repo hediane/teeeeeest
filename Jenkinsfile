@@ -14,6 +14,7 @@ pipeline {
 		
                 sh "docker-compose docker-compose.yml up "
             }
+	}
         }
     }
 }
