@@ -9,10 +9,11 @@ pipeline {
         }
 	
         stage('Integration Test') {
-            steps {
-		withEnv(["PATH=$PATH:~/.usr/local/bin"]){
 		
-                sh "docker-compose docker-compose.yml up "
+                sh "docker-compose -f docker-compose.yml up --force-recreate --abort-on-container-exit"
+		sh "docker-compose -f docker-compose.yml down -v"
+
+
             }
 	}
         }
