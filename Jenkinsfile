@@ -9,13 +9,14 @@ pipeline {
         }
 	
         stage('Integration Test') {
-		
+		 steps {
                 sh "docker-compose -f docker-compose.yml up --force-recreate --abort-on-container-exit"
-		sh "docker-compose -f docker-compose.yml down -v"
+                sh "docker-compose -f docker-compose.yml down -v"
+           	 }
 
 
             }
 	
-        }
+        
     }
 }
