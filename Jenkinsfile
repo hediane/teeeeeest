@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
+    environment
+    {
+        PATH = "$PATH:/usr/bin"
+    }
     stages {
         stage('Integration Test') {
 		 steps {
-                sh " docker-compose up --force-recreate --abort-on-container-exit"
+                sh " PATH docker-compose up --force-recreate --abort-on-container-exit"
                 
            	 }
 
