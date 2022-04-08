@@ -2,15 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                 sh "docker build -t teeeeeest -f ./mvc/dockerfile ."
-            }
-        }
-	
         stage('Integration Test') {
 		 steps {
-                sh "/usr/bin/docker-compose docker-compose -f docker-compose.yml up --force-recreate --abort-on-container-exit"
+                sh " docker-compose up --force-recreate --abort-on-container-exit"
                 
            	 }
 
