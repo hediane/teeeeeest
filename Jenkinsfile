@@ -5,7 +5,7 @@ pipeline {
         stage('Integration Test') {
 		 steps {
 		
-                sh "$(which docker) docker-compose up"
+                sh "docker-compose up"
 		
                 
            	 }
