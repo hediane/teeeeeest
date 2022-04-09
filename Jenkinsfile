@@ -1,11 +1,13 @@
 pipeline {
     agent any
-    
+     environment {
+     PATH = "$PATH:/usr/bin"
+  }
     stages {
         stage('Integration Test') {
 		 steps {
 		
-                sh "./docker-compose up -d"
+                sh "/usr/bin/docker-compose up -d"
                 
            	 }
 
