@@ -5,7 +5,7 @@ pipeline {
         stage('Integration Test') {
 		 steps {
 		
-                sh "./docker-compose up --force-recreate --abort-on-container-exit"
+                sh "./docker-compose up -d"
                 
            	 }
 
