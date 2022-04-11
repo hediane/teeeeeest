@@ -8,8 +8,9 @@ pipeline {
         stage('Integration Test') {
 
 		 steps {
-		
-                  sh "docker-compose up"
+		 
+		echo "PATH is: $PATH" 
+		sh "/usr/bin/docker-compose up"
                 
            	 }
 
