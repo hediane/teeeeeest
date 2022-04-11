@@ -1,6 +1,6 @@
 pipeline {
    environment {
-        PATH = "$PATH:/usr/local/bin"
+       DOCKER_PATH=$(which docker) docker-compose up
     }
     agent any
 
@@ -9,8 +9,8 @@ pipeline {
 
 		 steps {
 		 
-		echo "PATH is: $PATH" 
-		sh "/usr/local/bin/docker-compose up"
+		echo "PATH is: $DOCKER_PATH" 
+		sh "DOCKER_PATH"
                 
            	 }
 
