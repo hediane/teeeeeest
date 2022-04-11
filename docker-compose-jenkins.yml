@@ -9,6 +9,6 @@ services:
       - 8085:8080
       - 50003:50000
     volumes:
-      - ./jenkins:/var/jenkins_home
-      - ${DOCKER_PATH}:/usr/bin/docker:ro
+      - /home/jenkins_home/jenkins_configuration:/var/jenkins_home
+      - /usr/bin/docker:/usr/bin/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
