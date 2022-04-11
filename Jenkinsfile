@@ -10,7 +10,7 @@ pipeline {
 		 steps {
 		 
 		echo "PATH is: $PATH" 
-		sh "/usr/bin/docker-compose up"
+		sh "/usr/local/bin/docker-compose up"
                 
            	 }
 
