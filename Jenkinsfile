@@ -1,5 +1,3 @@
-library ('mylibrary')_
-
 checkout([
         $class: 'GitSCM', 
         branches: [[name: '*/main']], 
