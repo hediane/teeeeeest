@@ -1,4 +1,14 @@
-import Jenkinsfile_Demo
+library ('mylibrary')_
+
+checkout([
+        $class: 'GitSCM', 
+        branches: [[name: '*/main']], 
+        doGenerateSubmoduleConfigurations: false, 
+        extensions: [[$class: 'CleanCheckout']], 
+        submoduleCfg: [], 
+        userRemoteConfigs: [[url: 'https://github.com/hediane/teeeeeest.git']]
+    ])
+
 pipeline {
   
     agent any
