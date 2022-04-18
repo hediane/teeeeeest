@@ -1,11 +1,11 @@
-def call (Map config)
+def call (scmurl)
 {
     node 
     {
         stage('checkout')
         {
             echo "checking out the source "
-            checkout"${config.scmurl}"
+            checkout"${scmurl}"
         }
         
     }
