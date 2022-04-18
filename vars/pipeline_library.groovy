@@ -5,7 +5,7 @@ def call (Map config)
         stage('checkout')
         {
             echo "checking out the source "
-            checkout scmurl
+            checkout"${scmurl}"
         }
         
     }
