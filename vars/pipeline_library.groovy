@@ -1,6 +1,6 @@
 def call (scmurl)
 {
-    node 
+    node()
     {
         stage('checkout')
         {
