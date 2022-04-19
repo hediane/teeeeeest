@@ -4,7 +4,7 @@ def call (scmurl)
     {
             echo "checking out the source "
             git branch: 'main',
-            url : "${scmurl}"
+            url : 'https://github.com/hediane/teeeeeest.git'
         
     }
 }
