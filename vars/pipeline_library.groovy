@@ -1,4 +1,4 @@
-def call (Map config)
+def call (scmurl)
 {
     node
         { 
