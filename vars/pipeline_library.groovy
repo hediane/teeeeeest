@@ -8,8 +8,11 @@ def call (scmurl)
             }
             stage('checkout')
             {
-                git branch: 'main',
-                url : "git@github.com:hediane/teeeeeest.git"
+                retriever: modernSCM([
+                    $class: 'GitSCMSource',
+                    credentialsId: 'your-credentials-id', // remove this if it's public!
+                    remote: '${scmurl}'
+])
             }
     }
 }
