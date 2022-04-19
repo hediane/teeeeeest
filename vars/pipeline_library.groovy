@@ -1,9 +1,18 @@
-def call (scmurl)
+def call (Map config)
 {
-    node()
-    {
-        echo "checking out the source "
-        git url : 'https://github.com/hediane/teeeeeest.git'
-        
+    pipeline
+        { 
+        stages
+        {
+            stage('msg')
+            {
+                echo "checking out the source "
+            }
+            stage('checkout')
+            {
+                git branch: 'main',
+                url : "${scmurl}"
+            }
+        }
     }
 }
