@@ -4,7 +4,8 @@ def call (scmurl)
         { 
             stage('msg')
             {
-                echo "checking out the source "
+                echo "checking out the source scmurl "
+                echo "${scmurl}"
             }
            stage("testCheckout") {
             checkout([$class: 'GitSCM', 
