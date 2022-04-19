@@ -6,7 +6,7 @@ def call (scmurl)
         {
             echo "checking out the source "
             git branch: 'main',
-            remote: "${scmurl}"
+            git url: "${scmurl}"
 
         }
         
