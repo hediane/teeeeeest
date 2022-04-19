@@ -6,9 +6,13 @@ def call (scmurl)
             {
                 echo "checking out the source "
             }
-            stage('checkout')
-            {  
-             git url:scmurl
-            }
+           stage("testCheckout") {
+            checkout([$class: 'GitSCM', 
+            branches: [[name: 'refs/tags/main']], 
+            userRemoteConfigs: [[
+                refspec: '+refs/tags/*:refs/remotes/origin/tags/*', 
+                url: 'https://github.com/hediane/teeeeeest.git']]
+        ])
+    }
     }
 }
