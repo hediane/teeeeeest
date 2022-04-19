@@ -8,7 +8,7 @@ def call (scmurl)
             }
             stage('checkout')
             {
-               remote: "${scmurl}"
+               url: "${scmurl}"
             }
     }
 }
