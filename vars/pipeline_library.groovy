@@ -8,6 +8,7 @@ def call (scmurl)
             }
             stage('checkout')
             {  
+             git branch : 'main',
               git url : "https://github.com/hediane/teeeeeest.git"
             }
     }
