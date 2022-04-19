@@ -11,7 +11,7 @@ def call (scmurl)
                 retriever: modernSCM([
                     $class: 'GitSCMSource',
                     credentialsId: 'your-credentials-id', // remove this if it's public!
-                    remote: '${scmurl}'
+                    remote: "${scmurl}"
 ])
             }
     }
