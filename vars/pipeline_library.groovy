@@ -7,8 +7,8 @@ def call (scmurl)
                 echo "checking out the source "
             }
             stage('checkout')
-            {
-               git url: "${scmurl}"
+            {  
+              checkout -f "${scmurl}"
             }
     }
 }
