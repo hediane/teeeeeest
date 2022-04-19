@@ -8,9 +8,8 @@ def call (scmurl)
             }
             stage('checkout')
             {
-                retriever: modernSCM([
+               
                     remote: "${scmurl}"
-])
             }
     }
 }
