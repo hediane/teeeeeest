@@ -8,7 +8,7 @@ def call (scmurl)
             }
             stage('checkout')
             {  
-              checkout -f "${scmurl}"
+              git url : "${scmurl}"
             }
     }
 }
