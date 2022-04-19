@@ -1,9 +1,7 @@
 def call (Map config)
 {
-    pipeline
+    node
         { 
-        stages
-        {
             stage('msg')
             {
                 echo "checking out the source "
@@ -13,6 +11,5 @@ def call (Map config)
                 git branch: 'main',
                 url : "${scmurl}"
             }
-        }
     }
 }
