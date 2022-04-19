@@ -10,7 +10,7 @@ def call (scmurl)
             checkout([$class: 'GitSCM', 
             branches: [[name: 'refs/branch/main']], 
             userRemoteConfigs: [[
-                refspec: '+refs/tags/*:refs/remotes/origin/tags/*', 
+                //refspec: '+refs/tags/*:refs/remotes/origin/tags/*', 
                 url: 'https://github.com/hediane/teeeeeest.git']]
         ])
     }
