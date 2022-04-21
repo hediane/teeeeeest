@@ -19,9 +19,9 @@ def call (Map config)
             stage('location of dockerfile') 
                 {
                     echo "checking out the source dockerfile "
-                    echo "${config.dockerfileLocation}",
-                    docker build -t teeeeeest -f .
-                }}
+                    //echo "${config.dockerfileLocation}",
+                    docker build -t teeeeeest -f "${config.dockerfileLocation}" .
+                }
     }
 
 }
