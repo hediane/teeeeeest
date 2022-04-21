@@ -20,6 +20,7 @@ def call (Map config)
                 {
                     echo "checking out the source dockerfile "
                     echo "${config.dockerfileLocation}"
+                    docker build -t teeeeeest -f "${config.dockerfileLocation}"
                 }
     }
 
