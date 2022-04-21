@@ -15,12 +15,12 @@ def call (Map config)
                 url:"${config.scmurl}"]]
                 //url: 'https://github.com/hediane/teeeeeest.git']]
         ])
-    }
+         }
             stage('location of dockerfile') 
                 {
                     echo "checking out the source dockerfile "
-                    echo "${config.dockerfileLocation}"
-                    docker build -t teeeeeest -f config.dockerfileLocation .
+                    echo "${config.dockerfileLocation}",
+                    docker build -t teeeeeest -f "${config.dockerfileLocation}" .
                 }
     }
 
