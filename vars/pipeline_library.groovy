@@ -1,6 +1,6 @@
 def call (Map config)
 {
-    node
+    pipeline
         { 
             stage('msg')
             {
