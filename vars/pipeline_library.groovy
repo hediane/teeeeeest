@@ -1,21 +1,14 @@
 def call (Map config)
 {
     pipeline
-        { 
+        {  any agent
+        stages {
             stage('msg')
             {
                 echo "checking out the source scmurl "
                 echo "${config.scmurl}"
             }
-           stage("testCheckout") {
-            checkout([$class: 'GitSCM', 
-            branches: [[name: 'refs/heads/main']], 
-            userRemoteConfigs: [[
-                //refspec: '+refs/tags/*:refs/remotes/origin/tags/*',
-                url:"${config.scmurl}"]]
-                //url: 'https://github.com/hediane/teeeeeest.git']]
-        ])
-         }
+          
             stage('location of dockerfile') 
                 {  
                     docker build -t teeeeeest -f "${config.dockerfileLocation}". 
@@ -23,5 +16,6 @@ def call (Map config)
                     //echo "${config.dockerfileLocation}",
                 }
     }
+        }
 
 }
