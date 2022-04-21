@@ -1,6 +1,6 @@
 @Library('pipeline_library') _
 pipeline_library(
     scmurl:'https://github.com/hediane/teeeeeest.git' ,
-    dockerfileLocation:'project/mvc/dockerfile'
+    dockerfileLocation:'./mvc/dockerfile'
 
 )
