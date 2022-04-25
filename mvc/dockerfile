@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://+:5000
 #USER appuser
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["./mvc/DeployTest.csproj", "./"]
+COPY ["./DeployTest.csproj", "./"]
 RUN dotnet restore "DeployTest.csproj"
 COPY . .
 #WORKDIR "/src/."
