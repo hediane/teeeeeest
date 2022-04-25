@@ -18,8 +18,14 @@ def call (Map config)
          }
             stage('location of dockerfile') 
                 {  
-                    sh "docker build -t teeeeeest -f ./mvc/dockerfile ."
+                    sh "docker build -t teeeeeest -f ${config.dockerfileLocation} ."
                     echo "checking out the source dockerfile "
+                    //echo "${config.dockerfileLocation}",
+                }
+            stage('location of docker-compose') 
+                {  
+                    sh "${config.dockerComposeLocation} up"
+                    echo "Buid Image with docker-compose "
                     //echo "${config.dockerfileLocation}",
                 }
     }
